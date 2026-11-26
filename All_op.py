@@ -116,3 +116,9 @@ b1.inorder(b1.root)
 # print("\nPostorder: ")
 # b1.postorder(b1.root)
 # b1.findminmax()
+
+# 1. insert the following token numbers into a BST 50, 30,70,30,40,60,80.10
+# 2. serch for token number 40
+# 3. display all token numbers in sorted order 
+# 4. find the smallest and largest token numbers
+# 5. Delete token numbers 70 and display the updat bst.
