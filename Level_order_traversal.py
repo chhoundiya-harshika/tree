@@ -73,16 +73,24 @@ class BST:
             return
         arr=[]
         cnt=0 #for counting visited node
+        level=0
         arr.append(rt)
         while cnt<len(arr):
-            temp=arr[cnt]
-            cnt+=1
-            print(temp.data, end=" ")
-            if temp.left:
-                arr.append(temp.left)
-            if temp.right:
-                arr.append(temp.right)
-        
+            node_count=len(arr)-cnt #no of nodes to be visited
+            print("\nlevel", level,"nodes:", end=" ")
+            
+            for i in range(node_count): #printing numbers level wise
+                
+                temp=arr[cnt]
+                cnt+=1
+                print(temp.data, end=" ")
+            
+                if temp.left:
+                    arr.append(temp.left)
+                if temp.right:
+                    arr.append(temp.right)
+            level+=1
+        print("\nHight of the tree:", level)
     # def preorder(self, rt):
     #     if rt is None:
     #         return
@@ -118,7 +126,7 @@ b1.insert(Node(65))
 b1.insert(Node(300))
 print("\nInorder: ")
 b1.inorder(b1.root)
-print("\nLevel order traveral: ")
+print("\nLevel order traversal: ")
 b1.level_order(b1.root)
 # b1.delete_node(b1.root,100)
 # print("\n After deletion:", end=" ")
